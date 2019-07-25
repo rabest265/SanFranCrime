@@ -1,0 +1,271 @@
+
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700|Roboto:300');
+
+
+html {
+  	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+#map,
+body,
+html {
+  height: 100%;
+	width:100%;
+}  
+
+p{
+    font-size:.9rem;
+}
+
+
+body {
+  	padding: 0px;
+  	margin: 0px;
+	position:relative;
+}
+
+
+.navbar{
+	background-color:#000;
+}
+
+.navbar-collapse.collapse.show{
+    padding-left:1em;
+    padding-right:1em;
+    margin-right:-1em;
+    margin-left:-1em;
+    background-color:#343a40;
+}
+
+
+h1, h2{
+    color:#0d4a96;
+    border-bottom:1px #c4c4c4 solid;
+}
+
+.dropdown-menu{
+    left:auto;
+    right:0;
+}
+
+h1{
+    font-size:1.8rem;
+    padding-bottom:1.2rem;
+    margin-bottom:1.2rem;
+}
+
+h2{
+    font-size:1.3rem;
+    padding-bottom:1rem;
+    margin-bottom:1rem;
+}
+
+h3{
+    color:#1e8e8e;
+    font-size:1.1rem;
+    margin-top:1rem;
+    padding-bottom:0;
+    margin-bottom:0;
+}
+
+a{
+    text-decoration:none;
+    color:#d56963;
+}
+a:hover, .dropdown-item:hover{
+    color:#d56963;
+}
+
+.dropdown-item:active{
+    color:#fff;
+    background-color:#d97240;
+}
+
+.dropdown-item.active{
+    color:#fff;
+    background-color:#1e8e8e; 
+}
+.navbar-dark .navbar-brand,
+a.navbar-brand{
+	color:#d56963;
+}
+
+
+
+#page-content {
+	display: flex; 
+    flex: 1 0 auto;
+    overflow:hidden;
+	flex-direction: column;
+}
+
+#page-content.home{
+	background:url("../streets.jpg") top center;
+	background-size:cover;
+}
+  
+#sticky-footer {
+    flex-shrink: none;
+	background:#000;
+}
+
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+
+.gj-textbox-md{
+	background:#fff;
+	border-radius:4px;
+	padding-left:8px;
+}
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    /*background: #7386D5;*/
+	position:relative;
+    color: #fff;
+	background:#333;
+    transition: all 0.3s;
+	color:#d1cec9;
+}
+
+#sidebar h3{
+	font-size: 1.2rem;
+	color:#f0cd7d;/*aac9d5;*/
+	padding-bottom:1rem;
+	border-bottom: 1px solid #5b5b5b;
+}
+#sidebar h4{
+	font-size: 1.2rem;
+	color:#31D0D0;/*aac9d5;*/
+	padding-bottom:.5rem;
+}
+#sideham{
+	position:absolute;
+	top:8px; right:-30px;
+	width:30px;
+	height:30px;
+	background-color:#333;
+	background-image:url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+	z-index:500;
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-size:20px 20px;
+	border-radius:0 4px 4px 0;
+	display:none;
+}
+
+#sideham span{
+	
+}
+
+.sidegroup{
+	margin:0 20px 20px;
+	padding-bottom:1rem;
+	border-bottom: 1px solid #5b5b5b;
+}
+
+input[type="range"]{width:100%;}
+.sidegroup p{
+	color:#fff;
+	margin-bottom:.5rem;
+}
+
+#sidebar, #sidebar.active {
+    margin-left: 0px;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px 20px 10px;
+}
+
+
+
+#sidebar a {
+    padding: 10px;
+	margin:10px 20px 20px;
+    text-align: center;
+    font-size: 1rem;
+    display: block;
+    border-radius: 5px;
+	background:#8c9d59;
+	color:#fff;
+}
+
+#sidebar a:hover {
+    color: #b94f5d;
+    background: #fff;
+}
+
+#sidebar a#scrapebtn {
+	background:#aa6d73;
+}
+/*---------tableau pages-----*/
+
+.tholder, .tscroll{
+	text-align:center;
+	margin:0;
+	width:100%;
+}
+
+.tableauPlaceholder{
+	margin:0 auto;
+}
+.tabscroll{
+	width:100%;
+	overflow-x:hidden;
+}
+
+.tabcaption{
+	max-width:1016px;
+	margin:30px auto;
+	text-align:left;
+	padding:0 20px;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#map {
+    width: 100%;
+    padding:0; margin:0;
+	min-height: 100vh;
+    transition: all 0.3s;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+	#sideham{
+		display:block;
+	}
+}
+
+@media (max-width: 1015px) {
+	.tabscroll{
+		overflow-x:scroll;
+	}
+}
+
